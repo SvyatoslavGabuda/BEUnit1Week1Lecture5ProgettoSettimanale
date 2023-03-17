@@ -179,7 +179,7 @@ public class LettoreMultimediale {
 		int n = 10;
 		while (n != 0) {
 			while(!scan.hasNextInt()) {
-				System.out.println("ATTENZIONE! valore non valido \ninserire valori tra 1 e 5 \0 per uscire dal player");
+				System.out.println("ATTENZIONE! valore non valido \ninserire valori tra 1 e 5 \n0 per uscire dal player");
 				scan.next();
 			}
 			n = scan.nextInt();
