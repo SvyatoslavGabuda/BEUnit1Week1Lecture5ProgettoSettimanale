@@ -68,7 +68,7 @@ public class LettoreMultimediale {
 			}
 			int t = scan.nextInt();
 			if (t != 0 && t != 1 && t != 2) {
-				System.out.println("ATTENZIONE inserici un carattere valido!! ");
+				System.out.println("ATTENZIONE inserici valore valido!! ");
 				i--;
 
 			} else {
