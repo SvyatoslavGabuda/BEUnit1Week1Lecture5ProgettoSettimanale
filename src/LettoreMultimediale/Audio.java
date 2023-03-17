@@ -48,10 +48,8 @@ public class Audio extends ElementoMultimediale implements Riproducibile {
 			System.out.print(this.getTitolo() + " ");
 			for (int j = 0; j < this.volume; j++) {
 				System.out.print("!");
-				if (j == this.volume - 1) {
-					System.out.print("\n");
-				}
 			}
+			System.out.print("\n");
 		}
 	}
 

@@ -42,10 +42,9 @@ public class Video extends ElementoMultimediale implements Riproducibile, Lumino
 			}
 			for (int k = 0; k < this.luminosita; k++) {
 				System.out.print("*");
-				if (k == this.luminosita - 1) {
-					System.out.print("\n");
-				}
+
 			}
+			System.out.print("\n");
 		}
 
 	}

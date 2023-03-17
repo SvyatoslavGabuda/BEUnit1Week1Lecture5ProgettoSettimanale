@@ -23,10 +23,8 @@ public class Img extends ElementoMultimediale implements Luminosita {
 		System.out.print(this.getTitolo() + " ");
 		for (int i = 0; i < this.luminosita; i++) {
 			System.out.print("*");
-			if (i == this.luminosita - 1) {
-				System.out.print("\n");
-			}
 		}
+		System.out.print("\n");
 	}
 
 	public String toString() {

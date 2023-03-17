@@ -20,7 +20,7 @@ public class LettoreMultimediale {
 //		}
 //		if (terzo instanceof Img) {
 //			((Img) terzo).show();
-//		}
+//		} 
 
 		// Creazione di una playlist di default
 		ElementoMultimediale primo = new Audio("Audio 'The best interfaces'", 3, 2);
@@ -41,6 +41,10 @@ public class LettoreMultimediale {
 	public static void start(ElementoMultimediale[] p) {
 		System.out.println("\tBenvenuto nel Lettore Multimediale");
 		System.out.println("Quale playlist desideri riprodurre? \n 0 -- playListDefault \n 1 -- Crea Nuova playList");
+		while(!scan.hasNextInt()) {
+			System.out.println("ATTENZIONE! valore non valido \n\n---INSERISCI:\n 0 -- playListDefault \n 1 -- Crea Nuova playList ");
+			scan.next();
+		}
 		int a = scan.nextInt();
 		if (a == 0) {
 			riproduciPlayList(p);
@@ -58,6 +62,10 @@ public class LettoreMultimediale {
 		ElementoMultimediale[] playList = new ElementoMultimediale[5];
 		for (int i = 0; i < playList.length; i++) {
 			System.out.println("quale file vuoi inserire? \n 0 per Audio \n 1 per Video \n 2 per Immagine");
+			while(!scan.hasNextInt()) {
+				System.out.println("ATTENZIONE! valore non valido \n\n---INSERISCI: \n 0 per Audio \n 1 per Video \n 2 per Immagine");
+				scan.next();
+			}
 			int t = scan.nextInt();
 			if (t != 0 && t != 1 && t != 2) {
 				System.out.println("ATTENZIONE inserici un carattere valido!! ");
@@ -89,8 +97,16 @@ public class LettoreMultimediale {
 		System.out.println("Inserisci il TITOLO della canzone: ");
 		String titolo = scan.nextLine();
 		System.out.println("Inserisci la DURATA della canzone: ");
+		while(!scan.hasNextInt()) {
+			System.out.println("ATTENZIONE! valore non valido \n inserire un interno positivo");
+			scan.next();
+		}
 		int durata = scan.nextInt();
 		System.out.println("Inserisci il VOLUME della canzone: ");
+		while(!scan.hasNextInt()) {
+			System.out.println("ATTENZIONE! valore non valido \n inserire un interno positivo");
+			scan.next();
+		}
 		int volume = scan.nextInt();
 
 		ElementoMultimediale audio = new Audio(titolo);
@@ -106,10 +122,22 @@ public class LettoreMultimediale {
 		System.out.println("Inserisci il TITOLO del video: ");
 		String titolo = scan.nextLine();
 		System.out.println("Inserisci la DURATA del video: ");
+		while(!scan.hasNextInt()) {
+			System.out.println("ATTENZIONE! valore non valido \n inserire un interno positivo");
+			scan.next();
+		}
 		int durata = scan.nextInt();
 		System.out.println("Inserisci il VOLUME del video: ");
+		while(!scan.hasNextInt()) {
+			System.out.println("ATTENZIONE! valore non valido \n inserire un interno positivo");
+			scan.next();
+		}
 		int volume = scan.nextInt();
 		System.out.println("Inserisci la LUMINOSITA del video: ");
+		while(!scan.hasNextInt()) {
+			System.out.println("ATTENZIONE! valore non valido \n inserire un interno positivo");
+			scan.next();
+		}
 		int luminosita = scan.nextInt();
 
 		ElementoMultimediale video = new Video(titolo);
@@ -126,9 +154,15 @@ public class LettoreMultimediale {
 	private static ElementoMultimediale creaImmagine() {
 		scan.nextLine();
 		System.out.println("Inserisci il TITOLO del Immagine: ");
+		
 		String titolo = scan.nextLine();
 
 		System.out.println("Inserisci la LUMINOSITA del Immagine: ");
+	
+		while(!scan.hasNextInt()) {
+			System.out.println("ATTENZIONE! valore non valido \n inserire un interno positivo");
+			scan.next();
+		}
 		int luminosita = scan.nextInt();
 
 		ElementoMultimediale immagine = new Img(titolo);
@@ -144,6 +178,10 @@ public class LettoreMultimediale {
 				"Quale elemento desideri Riprodurre? \n- inserire valori tra 1 e 5 \n- scrivere 0 per uscire dal player ");
 		int n = 10;
 		while (n != 0) {
+			while(!scan.hasNextInt()) {
+				System.out.println("ATTENZIONE! valore non valido \ninserire valori tra 1 e 5 \0 per uscire dal player");
+				scan.next();
+			}
 			n = scan.nextInt();
 			if (n == 0) {
 				System.out.println("uscito dal plyaer");
